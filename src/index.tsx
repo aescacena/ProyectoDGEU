@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import './assets/css/original.css';
 import Product from './components/Product';
 import Description from './components/Description';
 import Price from './components/Price';
