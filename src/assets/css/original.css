@@ -1,0 +1,169 @@
+.pencil-banner {
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    margin-bottom: 1px;
+    padding: 0;
+    padding-top: 3px;
+    border: none;
+    border-bottom-width: 2px;
+    border-bottom-color: #c5cbd5;
+    border-bottom-style: solid;
+}
+
+.pencil-banner .icon-image {
+    vertical-align: bottom;
+    height: 36px;
+    margin: 0;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.pencil-banner .headline {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 36px;
+    color: #1d252c;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.pencil-banner .body-copy {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 36px;
+    padding-left: 11px;
+    color: #1d252c;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.pencil-banner .body-copy p {
+    margin: 0;
+}
+
+.pencil-banner .call-to-action {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 36px;
+    padding-left: 11px;
+    text-decoration: none;
+    color: #0046be;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.pencil-banner a.disclaimer-call-to-action {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 36px;
+    padding-left: 11px;
+    text-decoration: none;
+    color: #55555a;
+    font-size: 11px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.pencil-banner .disclaimer-text {
+    padding-left: 10px;
+    font-size: 11px;
+}
+
+.pencil-banner.darkBlue .headline {
+    color: #001e73;
+}
+
+.pencil-banner.myBestBuyBlue .headline {
+    color: #0073bd;
+}
+
+.pencil-banner.darkGrey .headline {
+    color: #1d252c;
+}
+
+.pencil-banner.red .headline {
+    color: #bb0628;
+}
+
+.widget-divider {
+    padding-top: 10px;
+}
+
+.widget-divider .horizontal-rule {
+    width: 100%;
+    display: inline-block;
+    padding-top: 1px;
+    border-bottom: 1px solid #c5cbd5;
+}
+
+.widget-divider .headlines>div {
+    display: table;
+    position: relative;
+    top: -25px;
+    margin: 0px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.widget-divider .headlines>div.headline {
+    font-size: 40px;
+    line-height: 48px;
+    background-color: #fff;
+    color: #1d252c;
+}
+
+.widget-divider .headlines>div.headline p {
+    margin-bottom: 6px;
+}
+
+.widget-divider .headlines>div.sub-headline {
+    top: -30px;
+    font-size: 20px;
+    color: #55555a;
+}
+
+.widget-divider .header-bar-headline {
+    height: 45px;
+    font-size: 20px;
+    padding: 10px 15px 10px 0;
+    border-bottom: 1px solid #c5cbd5;
+    color: #1d252c;
+}
+
+.widget-divider .divider-space {
+    width: 100%;
+    height: 30px;
+}
+
+.widget-accordion .accordion-wrapper .accordion-toggle {
+    background: none;
+    border: 0;
+    cursor: default;
+    position: relative;
+    width: 100%;
+    text-align: left
+}
+
+.widget-accordion .accordion-wrapper.collapsible .accordion-toggle {
+    cursor: pointer
+}
+
+.widget-accordion .accordion-wrapper.collapsible .accordion-toggle:before {
+    font-family: bbyicons;
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: inherit;
+    content: "\F125";
+    position: absolute;
+    right: 15px
+}
+
+.widget-accordion .accordion-wrapper.collapsible.show .accordion-toggle:before {
+    transform: rotate(180deg)
+}
