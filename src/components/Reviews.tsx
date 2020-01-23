@@ -1,6 +1,15 @@
 import React from 'react';
 
-class Reviews extends React.Component<{}, {}> {
+interface IReviewsProps {
+	rating: string;
+	numberOfReviews: string;
+}
+
+class Reviews extends React.Component<IReviewsProps, {}> {
+
+	constructor(props: IReviewsProps) {
+		super(props);
+	}
 
     public render() {
         return (
@@ -14,7 +23,7 @@ class Reviews extends React.Component<{}, {}> {
                                         <h3 className="type-subhead-regular">Calificación General del Cliente</h3>
                                         <div className="overall-ratings-stars">
                                             <div className="c-ratings-reviews v-large v-split">
-                                                <p className="sr-only"></p><span className="v-split-item"><span className="c-stars c-stars-large" aria-hidden="true"><span className="unfilled"></span><span className="filled" style={{ width: "98.00000000000001%" }}></span></span><span className="c-review-average" aria-hidden="true">4.9</span></span><span className="c-reviews"><span className="c-total-reviews" aria-hidden="true">(1,228 Reseñas)</span></span>
+                                                <p className="sr-only"></p><span className="v-split-item"><span className="c-stars c-stars-large" aria-hidden="true"><span className="unfilled"></span><span className="filled" style={{ width: "98.00000000000001%" }}></span></span><span className="c-review-average" aria-hidden="true">{this.props.rating}</span></span><span className="c-reviews"><span className="c-total-reviews" aria-hidden="true">({this.props.numberOfReviews} Reseñas)</span></span>
                                             </div>
                                         </div>
                                     </div>

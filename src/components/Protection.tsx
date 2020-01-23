@@ -1,10 +1,19 @@
 import React from 'react';
 
-class Protection extends React.Component<{}, {}> {
+interface IProtectionProps {
+	warrantyDuration: string;
+	warrantyPrice: string;
+}
 
-    public render() {
-        return (
-            <>
+class Protection extends React.Component<IProtectionProps, {}> {
+
+	constructor(props: IProtectionProps) {
+		super(props);
+	}
+
+	public render() {
+		return (
+			<>
 				<div className="widget-wrapper">
 					<div data-reactroot="">
 						<div id="widget-667a5176-6029-414e-8c0c-b8f6f87c0f09" data-version="2.0.0">
@@ -23,7 +32,7 @@ class Protection extends React.Component<{}, {}> {
 											<div className="warranty-tile-group-title">
 												<h3>Plan de Protección contra Robo y Daño Accidental<a className="warranty-tile-group-title-info" href="javascript:void(0);"><i className="ficon-info"></i></a></h3>
 											</div><label title="1 Año Plan Contra Robo y Accidentes Geek Squad" htmlFor="warranty-tile-type-I-1000197427"><input type="radio" id="warranty-tile-type-I-1000197427" name="warranty-tile-type-I" value="1000197427" />
-												<div className="warranty-tile"><span className="warranty-duration">1-año</span><span className="warranty-price">$1,999</span><i className="ficon-triangle"></i></div>
+												<div className="warranty-tile"><span className="warranty-duration">{this.props.warrantyDuration}</span><span className="warranty-price">{this.props.warrantyPrice}</span><i className="ficon-triangle"></i></div>
 											</label><label htmlFor="warranty-tile-type-I-none"><input type="radio" id="warranty-tile-type-I-none" name="warranty-tile-type-I" value="0" defaultChecked />
 												<div className="warranty-tile warranty-tile-no-thanks"><span>No, gracias</span><i className="ficon-triangle"></i></div>
 											</label>
@@ -34,9 +43,9 @@ class Protection extends React.Component<{}, {}> {
 						</div>
 					</div>
 				</div>
-            </>
-        );
-    }
+			</>
+		);
+	}
 
 }
 

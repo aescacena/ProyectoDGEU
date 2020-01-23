@@ -1,6 +1,16 @@
 import React from 'react';
 
-class Financing extends React.Component<{}, {}> {
+interface IFinancingProps {
+	numberOfMonths: string;
+	monthlyPayment: string;
+	fullPayment: string;
+}
+
+class Financing extends React.Component<IFinancingProps, {}> {
+
+	constructor(props: IFinancingProps) {
+		super(props);
+	}
 
     public render() {
         return (
@@ -12,8 +22,8 @@ class Financing extends React.Component<{}, {}> {
 							<div className="bbmx-financing-offers">
 								<div className="financingOffersContainer" data-reactroot="" data-reactid="1" data-react-checksum="521373880">
 									<div className="financingOffersComponent" data-reactid="2">
-										<p className="type-paragraph-title header-text" data-reactid="3">HASTA 15 MESES DE: $495</p>
-										<div className="small" data-reactid="4">(Pagando a meses: $7,415)</div>
+										<p className="type-paragraph-title header-text" data-reactid="3">HASTA { this.props.numberOfMonths } MESES DE: { this.props.monthlyPayment }</p>
+										<div className="small" data-reactid="4">(Pagando a meses: { this.props.fullPayment })</div>
 										<div className="cta-text-link" role="link" tabIndex={0} data-reactid="5">con métodos de pago participantes</div>
 									</div>
 								</div>

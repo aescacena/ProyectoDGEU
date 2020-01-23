@@ -1,6 +1,45 @@
 import React from 'react';
 
-class Price extends React.Component<{}, {}> {
+interface IPriceProps {
+    paymentMethods: string[];
+    currentPrice: string;
+    discountAmount: string;
+    price: string;
+    discountExpirationDate: string;
+}
+
+class Price extends React.Component<IPriceProps, {}> {
+
+    constructor(props: IPriceProps) {
+        super(props);
+    }
+
+    public generatePriceSection() {
+
+		/*
+		Auxiliary function to generate the price section.
+
+		Input: -
+
+        Output: A price section with promotion if currentPrice,
+                discountAmount and discountExpirationDate are
+                present, or without promotion otherwise.
+		
+		Author: Pedro Bernáldez Torres
+		*/
+
+        if (this.props.currentPrice == "" || this.props.discountAmount == "" || this.props.discountExpirationDate == "") {
+            return (<div className="product-price" data-reactid="4">{this.props.price}</div>)
+        } else {
+            return (<><div className="product-price" data-reactid="4">{this.props.currentPrice}</div>
+                <div data-reactid="5">
+                    <div className="product-savings" data-reactid="6">AHORRA {this.props.discountAmount}</div>
+                    <div className="product-regprice" data-reactid="10">Antes {this.props.price}</div>
+                </div>
+                <div className="price-valid-until" data-reactid="14">Precio vigente hasta: {this.props.discountExpirationDate}</div></>)
+        }
+
+    }
 
     public render() {
         return (
@@ -11,13 +50,8 @@ class Price extends React.Component<{}, {}> {
                             <div className="shop-price-block">
                                 <div className="price-block " data-reactroot="" data-reactid="1" data-react-checksum="1704590306">
                                     <div className="product-price-label" data-reactid="2">PRECIO DE CONTADO:</div>
-                                    <div className="product-price-label-description" data-reactid="3">(Contado, Débito, Revolvente)</div>
-                                    <div className="product-price" data-reactid="4">$7,129</div>
-                                    <div data-reactid="5">
-                                        <div className="product-savings" data-reactid="6">AHORRA $2,370 </div>
-                                        <div className="product-regprice" data-reactid="10">Antes $9,499</div>
-                                    </div>
-                                    <div className="price-valid-until" data-reactid="14">Precio vigente hasta: 15/01/2020</div>
+                                    <div className="product-price-label-description" data-reactid="3">({this.props.paymentMethods.join(", ")})</div>
+                                    { this.generatePriceSection() }
                                 </div>
                             </div>
                         </div>

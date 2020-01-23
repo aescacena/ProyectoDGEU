@@ -1,6 +1,14 @@
 import React from 'react';
 
-class Description extends React.Component<{}, {}> {
+interface IDescriptionProps {
+	description: string;
+}
+
+class Description extends React.Component<IDescriptionProps, {}> {
+
+	constructor(props: IDescriptionProps) {
+		super(props);
+	}
 
     public render() {
         return (
@@ -11,7 +19,7 @@ class Description extends React.Component<{}, {}> {
 							<div className="bbmx-product-description">
 								<div className="descriptionContainer body-copy-lg" data-reactroot="" data-reactid="1" data-react-checksum="2101230822">
 									<div data-reactid="2">
-										<p data-reactid="3">Fundamentalmente rediseñado. Con pantalla más grande. Sensor cardíaco eléctrico incorporado. Con corona digital con retroalimentación háptica. Notificaciones de frecuencia cardíaca baja y alta. Detección de caídas y emergencia SOS. Detección automática de ejercicios. Nuevos entrenamientos de yoga y senderismo. Funciones avanzadas para corredores como alertas de cadencia y ritmo. Actividad compartida con amigos. Coaching personalizado. Retos mensuales y premios por logros. Puedes usar Walkie-Talkie, hacer llamadas telefónicas y enviar mensajes. Escucha Apple Music y Apple Podcasts. Y usa Siri de formas completamente nuevas. Apple Watch Serie 4 te permite hacerlo desde tu muñeca.</p>
+										<p data-reactid="3">{ this.props.description }</p>
 									</div>
 								</div>
 							</div>
