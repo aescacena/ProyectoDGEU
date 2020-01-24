@@ -32,7 +32,7 @@ class Product extends React.Component<IProductProps, {}> {
 											<li className="sku-id"><span className="label">SKU:</span><span id="sku-value" itemProp="productID">{ this.props.sku }</span></li>
 											<li tabIndex={0} role="menuitem" className="customer-rating" itemProp="aggregateRating" itemType="http://schema.org/AggregateRating">
 												<div className="c-ratings-reviews v-small">
-													<p className="sr-only"></p><span className="c-stars c-stars-small" aria-hidden="true"><span className="unfilled"></span><span className="filled" style={{ width: "98.00000000000001%" }}></span></span><span className="c-reviews"><span className="c-review-average" aria-hidden="true">{ this.props.rating }</span><span className="c-total-reviews" aria-hidden="true">({ this.props.numberOfReviews })</span></span>
+													<p className="sr-only"></p><span className="c-stars c-stars-small" aria-hidden="true"><span className="unfilled"></span><span className="filled" style={{ width: "98.00000000000001%" }}></span></span><span className="c-reviews"><span className="c-review-average" aria-hidden="true">{ this.props.rating }</span><span className="c-total-reviews" aria-hidden="true"> ({ this.props.numberOfReviews })</span></span>
 												</div>
 											</li>
 										</ul>

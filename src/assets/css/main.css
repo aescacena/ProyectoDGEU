@@ -1,4 +1,39 @@
 /*
+Style of the section corresponding to
+the product price and promotions.
+*/
+.product-regprice {
+  font-size: large; }
+
+#price-before {
+  text-decoration: line-through; }
+
+.price-block .product-price {
+  font-size: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.product-savings {
+  width: 195px;
+  height: 35px;
+  font-size: 23px; }
+
+/*
+Style of the section corresponding to
+the financing service.
+*/
+.financingOffersComponent .type-paragraph-title {
+  font-size: large !important; }
+
+.financingOffersComponent .small {
+  font-size: 13px !important;
+  padding-top: 3px;
+  padding-bottom: 3px; }
+
+.financingOffersComponent .cta-text-link {
+  font-size: medium !important; }
+
+/*
 Modal style showing the credit cards
 participating in the financing service.
 */
@@ -27,23 +62,3 @@ participating in the financing service.
 
 .payment-method-logo {
   width: 100px !important; }
-
-/*
-Style of the section corresponding to
-the product price and promotions.
-*/
-.product-regprice {
-  font-size: large; }
-
-#price-before {
-  text-decoration: line-through; }
-
-.price-block .product-price {
-  font-size: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px; }
-
-.product-savings {
-  width: 195px;
-  height: 35px;
-  font-size: 23px; }
