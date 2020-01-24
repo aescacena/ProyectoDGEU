@@ -35,6 +35,10 @@ interface IGlobalState {
     warranty: {};
     general: {};
     others: {};
+    paymentMethodsModalTitle: string;
+    paymentMethodsNames: string[];
+    paymentMethodsLogos: string[];
+    paymentMethodsMonths: string[];
 }
 
 export default IGlobalState;
@@ -159,4 +163,26 @@ export const initialState: IGlobalState = {
     others: {
         "EAN/UPC": ["", "190198842534"]
     },
+    paymentMethodsModalTitle: "Tarjetas participantes en el servicio de financiación",
+    paymentMethodsNames: [
+        "Best Buy Citibanamex",
+        "Citibanamex",
+        "BBVA",
+        "PayPal",
+        "American Express"
+    ],
+    paymentMethodsLogos: [
+        "https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/MXBank_BBYCitibanamex.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/MXBank_Citibanamex2-87547.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/MXBank_BBVA2-87548.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/MX_Bank_Paypal-27663.png",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/MXBank_American_Express.jpg"
+    ],
+    paymentMethodsMonths: [
+        "12",
+        "12",
+        "18",
+        "12",
+        "24"
+    ]
 }

@@ -7,6 +7,10 @@ const mapStateToProps = (state: IGlobalState) => {
         numberOfMonths: state.numberOfMonths,
         monthlyPayment: state.monthlyPayment,
         fullPayment: state.fullPayment,
+        paymentMethodsModalTitle: state.paymentMethodsModalTitle,
+        paymentMethodsNames: state.paymentMethodsNames,
+        paymentMethodsLogos: state.paymentMethodsLogos,
+        paymentMethodsMonths: state.paymentMethodsMonths
     })
 }
 
