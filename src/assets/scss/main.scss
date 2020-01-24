@@ -1,3 +1,8 @@
+/*
+Modal style showing the credit cards
+participating in the financing service.
+*/
+
 .modal-lg {
 	width: 800px !important;
 }
@@ -29,4 +34,28 @@
 
 .payment-method-logo {
 	width: 100px !important;
+}
+
+/*
+Style of the section corresponding to
+the product price and promotions.
+*/
+
+.product-regprice {
+	font-size: large;
+}
+#price-before {
+	text-decoration: line-through;
+}
+.price-block {
+	.product-price {
+		font-size: 40px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+.product-savings {
+	width: 195px;
+	height: 35px;
+	font-size: 23px;
 }

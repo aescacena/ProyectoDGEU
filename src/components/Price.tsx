@@ -29,14 +29,15 @@ class Price extends React.Component<IPriceProps, {}> {
 		*/
 
         if (this.props.currentPrice == "" || this.props.discountAmount == "" || this.props.discountExpirationDate == "") {
-            return (<div className="product-price" data-reactid="4">{this.props.price}</div>)
+            return (<><br /><div className="product-price" data-reactid="4">{this.props.price}</div></>)
         } else {
-            return (<><div className="product-price" data-reactid="4">{this.props.currentPrice}</div>
-                <div data-reactid="5">
-                    <div className="product-savings" data-reactid="6">AHORRA {this.props.discountAmount}</div>
-                    <div className="product-regprice" data-reactid="10">Antes {this.props.price}</div>
-                </div>
-                <div className="price-valid-until" data-reactid="14">Precio vigente hasta: {this.props.discountExpirationDate}</div></>)
+            return (
+                <><br /><div className="product-regprice" data-reactid="10">Antes <span id="price-before">{this.props.price}</span></div>
+                    <div className="product-price" data-reactid="4">{this.props.currentPrice}</div>
+                    <div data-reactid="5">
+                        <div className="product-savings" data-reactid="6">AHORRA {this.props.discountAmount}</div>
+                    </div>
+                    <div className="price-valid-until" data-reactid="14">Precio vigente hasta: {this.props.discountExpirationDate}</div></>)
         }
 
     }
@@ -51,7 +52,7 @@ class Price extends React.Component<IPriceProps, {}> {
                                 <div className="price-block " data-reactroot="" data-reactid="1" data-react-checksum="1704590306">
                                     <div className="product-price-label" data-reactid="2">PRECIO DE CONTADO:</div>
                                     <div className="product-price-label-description" data-reactid="3">({this.props.paymentMethods.join(", ")})</div>
-                                    { this.generatePriceSection() }
+                                    {this.generatePriceSection()}
                                 </div>
                             </div>
                         </div>
